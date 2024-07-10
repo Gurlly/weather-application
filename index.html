@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Application</title>
+
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/styles.css"/>
+
+    <script src="scripts/script.js" defer></script>
+
+</head>
+<body>
+
+    <header aria-label="Website header">
+
+        <!--Shows the location's weather-->
+        <section id="location" aria-lable="Location Information">
+            <i class="fa fa-map-marker" aria-hidden="true" aria-hidden="true"></i>
+            <h1 id="location-name" aria-label="Location name">Manila</h1>
+        </section>
+        <!--Search for the location-->
+        <form id="form" aria-label="Search Location" role="form">
+            <input type="text" id="search-location" name="location" placeholder="Search Location..." autofocus role="search"/>
+            <button type="submit" id="submit-button" role="button"><i class="fa fa-search" aria-hidden="true" role="submit button"></i></button>
+        </form>
+
+    </header>
+
+    <main aria-label="Main container">
+
+        <!--The main weather container-->
+        <section id="weather-container" aria-label="Weather container">
+            <!--Current date-->
+            <time id="date-container" datetime="2024-06-06" aria-label="Date Today">Today, <span id="date">12 June</span></time>
+            <!--Current temperature-->
+            <div id="temperature-container" aria-label="Temperature container">
+                <h1 id="temperature" aria-label="Current Temperature"><span id="temp-val">34</span>°</h1>
+                <figure id="image-container">
+                    <img src="resources/sunny.png" alt="Sunny Day" id="weather-img">
+                </figure>
+            </div>
+            <!--Tells what is the weather today-->
+            <h2 id="weather-status" aria-label="Weather Status">Sunny</h2>
+
+            <!--Contains the other weather information-->
+            <div id="other-weather-information" aria-label="Other Weather Information">
+                <!--Tells the wind speed-->
+                <div id="wind-container">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                            <path d="M15.7639 7C16.3132 6.38625 17.1115 6 18 6C19.6569 6 21 7.34315 21 9C21 10.6569 19.6569 12 18 12H3M8.50926 4.66667C8.87548 4.2575 9.40767 4 10 4C11.1046 4 12 4.89543 12 6C12 7.10457 11.1046 8 10 8H3M11.5093 19.3333C11.8755 19.7425 12.4077 20 13 20C14.1046 20 15 19.1046 15 18C15 16.8954 14.1046 16 13 16H3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                        </g>
+                    </svg>
+                    <h4 aria-label="Wind Speed"><span id="wind-speed">15</span> km/h</h4>
+                </div>
+                <!--Tells the humidity percentage-->
+                <div id="humidity-container">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> 
+                            <path d="M19 13.8C19 17.7764 15.866 21 12 21C8.13401 21 5 17.7764 5 13.8C5 12.8452 5.18069 11.9338 5.50883 11.1C6.54726 8.46135 12 3 12 3C12 3 17.4527 8.46135 18.4912 11.1C18.8193 11.9338 19 12.8452 19 13.8Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> 
+                        </g>
+                    </svg>
+                    <h4 aria-label="Huminidity"><span id="humidity">26</span>%</h4>   
+                </div>
+            </div>
+        </section>
+
+    </main>
+</body>
+</html>
